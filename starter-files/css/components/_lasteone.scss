@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+.bg5 {
+  height: 30vh;
+  padding-top: 40px;
+  width: 100%;
+  background-color: var.$grey-second;
+}
+
+.last2 {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.border {
+  border: 1px solid var.$color-primary;
+  margin-right: 5px;
+  padding: 2px;
+  border-radius: 7px;
+  background-color: var.$color-primary;
+}
+.link2 {
+  color: var.$grey-second;
+  padding-right: 20px;
+}
+.tt3 {
+  text-align: center;
+  padding-top: 30px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: flex;
+  margin-left: 0%;
+  margin-right: 0%;
+  color: var.$color-primary;
+}
+a {
+  color: var.$color-light;
+}

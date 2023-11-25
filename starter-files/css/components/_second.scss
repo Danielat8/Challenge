@@ -1,0 +1,181 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+.wrapper02 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  // background-color: var.$background-second;
+  min-height: 100vh;
+  margin-bottom: 150px;
+  position: relative;
+}
+.text {
+  text-align: center;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: flex;
+}
+.section {
+  width: 50%;
+  display: flex;
+  margin-left: 25%;
+  margin-bottom: 20px;
+}
+
+hr {
+  color: var.$blue;
+  border: 1px solid;
+  width: 30%;
+  margin-bottom: 50px;
+}
+.one {
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  display: flex;
+}
+
+.two {
+  width: 100%;
+  height: 100%;
+  display: block;
+  justify-content: center;
+}
+
+.col {
+  float: left;
+  justify-content: center;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  display: flex;
+  padding: 50px 0;
+  margin-left: 60px;
+  margin-top: 10px;
+}
+.col-50 {
+  width: 40%;
+  padding: 100px;
+  background-image: url(../images/mountain.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.col-70 {
+  width: 50%;
+  padding: 100px;
+  background-image: url(../images/balloon.jpg);
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-position: center;
+  display: flex;
+  // height: 200px;
+}
+.col-40 {
+  width: 40%;
+  padding: 100px;
+  background-image: url(../images/coast.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.col-60 {
+  width: 50%;
+  padding: 100px;
+  background-image: url(../images/island.jpg);
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-position: center;
+}
+
+@include mix.laptop-m-styles {
+  .col-60 {
+    width: 50%;
+    padding: 130px;
+  }
+  .col-40 {
+    width: 40%;
+    padding: 130px;
+  }
+  .col-70 {
+    width: 50%;
+    padding: 130px;
+  }
+  .col-50 {
+    width: 40%;
+    padding: 130px;
+    margin-bottom: 100px;
+  }
+  .col {
+    // justify-content: center;
+    justify-content: space-around;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 20px;
+  }
+  .wrapper02 {
+    margin-bottom: 300px;
+  }
+}
+@include mix.tablet-styles {
+  .col-60 {
+    width: 80%;
+    padding: 130px;
+    background-size: cover;
+  }
+  .col-40 {
+    width: 80%;
+    padding: 130px;
+    background-size: cover;
+  }
+  .col-70 {
+    width: 80%;
+    padding: 150px;
+    background-size: cover;
+  }
+  .col-50 {
+    width: 80%;
+    padding: 150px;
+    background-size: cover;
+  }
+  .col {
+    float: none;
+    // justify-content: space-around;
+    flex-direction: column;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    // margin-right: 20px;
+  }
+  .wrapper02 {
+    margin-bottom: 100px;
+  }
+}
+@include mix.mobile-l-styles {
+  .col-60 {
+    width: 50%;
+    padding: 150px;
+    background-size: cover;
+  }
+  .col-40 {
+    width: 50%;
+    padding: 150px;
+    background-size: cover;
+  }
+  .col-70 {
+    width: 50%;
+    padding: 150px;
+    background-size: cover;
+  }
+  .col-50 {
+    width: 50%;
+    padding: 150px;
+    background-size: cover;
+  }
+  .col {
+    float: none;
+    justify-content: center;
+    // justify-content: space-around;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

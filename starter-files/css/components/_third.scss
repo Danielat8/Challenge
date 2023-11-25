@@ -1,0 +1,88 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+.wrapper03 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var.$back-ground;
+  max-height: 200%;
+  margin-top: 150px;
+}
+
+.se {
+  // margin-top: 30%;
+  width: 50%;
+  display: flex;
+  margin-left: 25%;
+  margin-bottom: 100px;
+  // margin-top: 150px;
+}
+.tx {
+  text-align: center;
+  margin-top: 100px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: flex;
+}
+.parent01 {
+  justify-content: space-between;
+  display: flex;
+}
+
+.item01 {
+  width: 33%;
+  margin-left: 5%;
+  margin-top: 10px;
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+}
+input[type="text"] {
+  width: 35%;
+  padding: 15px 15px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 4px;
+}
+
+input[type="text"]:focus {
+  border: 3px solid #353055;
+}
+.cen {
+  margin-left: 35%;
+}
+
+@include mix.tablet-styles {
+  .parent01 {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    position: relative;
+  }
+  .cen {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  input[type="text"] {
+    width: 45%;
+    padding: 15px 15px;
+  }
+}
+
+@include mix.mobile-l-styles {
+  input[type="text"] {
+    width: 50%;
+    padding: 15px 15px;
+  }
+  button {
+    padding: 23px;
+  }
+}
