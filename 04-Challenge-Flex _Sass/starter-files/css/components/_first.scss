@@ -1,0 +1,88 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+.main-content {
+  width: 100%;
+  margin: 0 auto;
+  float: left;
+  padding-left: 20%;
+}
+.container {
+  position: relative;
+  width: 33%;
+  float: left;
+  flex-direction: row-reverse;
+  display: flex;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var.$background-color-base;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.container:hover .overlay {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.text {
+  color: var.$text-color-primary;
+  font-size: 20px;
+  position: absolute;
+  border-top: 1.5px solid var.$text-color-primary;
+  border-bottom: 1.5px solid var.$text-color-primary;
+  padding-top: var.$gutter-base / 2;
+  padding-bottom: var.$gutter-base / 2;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+}
+
+@include mix.mobile-l-styles {
+  .main-content {
+    padding: 0%;
+
+    .container {
+      width: 100%;
+      float: left;
+      flex-direction: column;
+      display: flex;
+    }
+  }
+}
+@include mix.tablet-styles {
+  .main-content {
+    width: 100%;
+    padding: 0;
+  }
+  .container {
+    width: 50%;
+    float: left;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}

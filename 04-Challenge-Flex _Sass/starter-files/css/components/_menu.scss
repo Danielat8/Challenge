@@ -1,0 +1,123 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+img {
+  display: block;
+  width: 40%;
+}
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  @extend %section;
+  .menu.wrapper {
+    @extend %wrap;
+  }
+}
+
+.menu .wrapper {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.burger {
+  border: 1.5px solid var.$text-color-primary;
+  color: var.$text-color-primary;
+}
+
+span {
+  color: var.$text-color-base;
+  text-decoration: none;
+  font-weight: var.$font-weight-bold;
+}
+span:hover {
+  text-decoration: underline;
+  font-weight: var.$font-weight-bold;
+  cursor: pointer;
+  font-family: var.$font-family-base;
+}
+.space {
+  display: flex;
+  padding-top: var.$gutter-base * 8;
+  padding-left: 20px;
+  color: var.$text-color-primary;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20%;
+  border-right: 1px solid transparent;
+}
+
+.navbar .logo {
+  display: flex;
+  margin-bottom: var.$gutter-base * 2;
+  padding-left: var.$gutter-base / 1;
+  padding-top: var.$gutter-base / 1;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  line-height: var.$line-height-base;
+  margin-top: var.$gutter-base * 1;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var.$text-color-primary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px 15px 10px 25px;
+  // font-weight: var.$font-weight-normal;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+.navbar ul li a i {
+  margin-right: 5px;
+}
+
+@include mix.four-k-styles {
+  .inner2 {
+    display: none;
+  }
+  .menu.inner2 {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+  .space {
+    padding-top: var.$gutter-base * 11;
+  }
+}
+@include mix.tablet-styles {
+  .navbar {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+}
+@include mix.laptop-l-styles {
+  .space {
+    padding-top: var.$gutter-base * 10;
+  }
+}
+@include mix.laptop-m-styles {
+  .space {
+    padding-top: var.$gutter-base * 8;
+  }
+}
