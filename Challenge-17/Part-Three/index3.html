@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Part Three</h1>
+    <button onClick="location.reload()">Reload Page</button>
+    <script>
+      function isPrime(num) {
+        if (num <= 1) {
+          return false;
+        }
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+          if (num % i === 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      function find() {
+        const number1 = parseInt(prompt("Enter the first number:"));
+        const number2 = parseInt(prompt("Enter the second number:"));
+        const number3 = parseInt(prompt("Enter the third number:"));
+
+        if ((isNaN(number1), isNaN(number2), isNaN(number3))) {
+          console.log("Invalid input. Please enter number.");
+        }
+        const smallest = Math.min(number1, number2, number3);
+        const largest = Math.max(number1, number2, number3);
+        console.log(
+          `Number 1: ${number1},Number 2: ${number2},Number 3: ${number3}`
+        );
+
+        console.log(`Smallest - ${smallest}, Largest - ${largest}`);
+
+        if (isPrime(smallest)) {
+          console.log(`The smallest number ${smallest} is prime.`);
+        } else {
+          console.log(`The smallest number ${smallest} is not prime.`);
+        }
+
+        if (isPrime(largest)) {
+          console.log(`The largest number ${largest} is prime.`);
+        } else {
+          console.log(`The largest number ${largest} is not prime.`);
+        }
+      }
+
+      find();
+    </script>
+  </body>
+</html>
