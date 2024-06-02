@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brainster's quiz</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+    />
+    <link rel="shortcut icon" href="#">
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    /> -->
+  </head>
+  <body>
+    <div id="loading-screen" class="hidden text-center fs-1 fw-bolder mt-5">
+      Loading...
+      <h2 class=" hidden spinner-border text-info text-center fs-1 fw-bolder mt-5" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+    </div>
+    <div id="start-screen" class="hidden text-center">
+      <h1>Welcome to Brainster's Trivia!</h1>
+      <p>Click on the start button to begin.</p>
+      <button id="start-button" class="btn btn-success">Start</button>
+    </div>
+    <div id="quiz-screen" class="hidden text-center">
+      <div class="on pt-4 pb-4">
+      <h1>Good Luck!</h1>
+      <p>Click on the button to start over.</p>
+      <hr style="width:50%" class="th">
+      <button id="start-over-button" class="btn btn-warning">Start Over</button>
+    </div>
+    <div class="silver pt-3  mt-3 border-top ">
+      <div id="question-container" class="mt-4 border-top  pt-4">
+      </div>
+    </div>
+      <div class="progress  mt-3">
+        <div
+          id="progress-bar"
+          class="progress-bar"
+          role="progressbar"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          0/20
+        </div>
+      </div>
+      <p id="progress-count" class=" mt-4 on">Completed: 0/20</p>
+    </div>
+
+    <div id="result-screen" class="hidden text-center">
+      <h1>Let's see your score!</h1>
+      <p id="score-text">Total Correct Answers: 0/20</p>
+      <p id="congratulations-text" class="hidden text-success fs-2">
+        Congratulations! You scored 20/20!
+      </p>
+      <button id="retry-button" class="btn btn-danger">Try Again</button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
