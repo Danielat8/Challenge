@@ -1,0 +1,155 @@
+body {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../Images/textures/264965-P4TIJM-916.jpg);
+}
+.nav-link-button {
+    color: #fff;
+    background: none;
+    border: none;
+    padding: 0;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-link-button:hover {
+    color: rgb(255, 196, 0);
+}
+/* unvisited link */
+.invalid-feedback {
+    display: block;
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+a:link {
+    color: rgb(224, 231, 224);
+    padding-right: 10px;
+    text-decoration: none;
+}
+.btn01 {
+    margin-top: 10px;
+}
+
+/* visited link */
+a:visited {
+    color: rgb(224, 231, 224);
+}
+
+/* mouse over link */
+a:hover {
+    color: rgb(255, 196, 0);
+}
+.navbar {
+    background-color: rgb(52, 8, 8);
+}
+
+.navbar-nav {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+.navbar-nav .nav-item {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+.text-white {
+    color: white;
+}
+.mt-4 {
+    margin-top: 1.5rem;
+}
+.mb-5 {
+    margin-bottom: 3rem;
+}
+.main-section {
+    padding: 50px 0;
+    position: relative;
+}
+.image-container {
+    position: relative;
+}
+.image-container img {
+    width: 50%;
+    margin-left: 35%;
+    height: auto;
+}
+.overlay-content {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    margin-right: 45%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.overlay-content h2,
+.overlay-content p {
+    color: #333;
+}
+.overlay-content .btn-primary {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #000;
+}
+.btn-primary {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #000;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+.overlay-content h2,
+.overlay-content p {
+    color: #333;
+}
+.con {
+    background: #ffc107;
+    color: #000;
+    padding: 50px 0;
+    text-align: center;
+}
+.on {
+    background-color: #ddd;
+    width: 70rem;
+    margin-left: 18%;
+    border-style: inset;
+    border-width: 7px;
+    border-color: rgb(218, 152, 128);
+}
+
+footer {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+    background-color: rgb(52, 8, 8);
+}
+/* FormContol(page2Log in) */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.form-label {
+    color: #fff;
+}
+.form-control {
+    margin-bottom: 15px;
+}
