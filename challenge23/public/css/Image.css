@@ -1,0 +1,5 @@
+.card-img-overlay {
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+}

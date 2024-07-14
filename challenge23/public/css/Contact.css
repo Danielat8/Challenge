@@ -1,0 +1,33 @@
+.overlay {
+    position: relative;
+    background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("/images/contact-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.card-img-overlay {
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input,
+textarea {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: rgb(183, 183, 217);
+    border-radius: 8px;
+    width: 55%;
+}
+
+input:focus,
+textarea:focus {
+    border-color: rgb(0, 255, 0);
+    border-radius: 8px;
+}
