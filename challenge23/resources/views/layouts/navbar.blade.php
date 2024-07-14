@@ -16,5 +16,6 @@
                 </div>
             </div>
         </nav>
-
-        <script src="{{ asset('js/script.js')}}"></script>
+    </div>
+</div>
+<script src="{{ asset('js/script.js')}}"></script>
