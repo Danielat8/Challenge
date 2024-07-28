@@ -1,0 +1,19 @@
+.photo {
+    /* position: relative; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../Images/synthesio-0301.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+.tx {
+    padding-bottom: 3rem;
+    padding-top: 13.5rem;
+    font-size: 60px;
+    white-space: normal;
+    width: 100%;
+    word-wrap: break-word;
+    text-align: center;
+}
